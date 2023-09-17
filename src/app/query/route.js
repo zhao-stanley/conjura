@@ -2,8 +2,8 @@ import { NextResponse } from "next/server";
 
 export async function POST(request) {
   const req = await request.json();
-  const type = res.type;
-  const query = res.query;
+  const type = req.type;
+  const query = req.query;
 
   if (type === "filter") {
     const res = await fetch("http://localhost:5000/filter", {
